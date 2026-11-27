@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealHarbor - Real Black Friday Deals, Checked and Graded</title>
+<meta name="description" content="Black Friday and Cyber Monday deals checked at real stores, each graded as a new low, strong price, routine sale, or inflated list.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <p class="brand">DealHarbor</p>
+    <h1>Real Black Friday deals, checked and graded</h1>
+    <p class="lede">Every price was read at its store or in a deals source that names the store. Each deal carries a verdict on whether it is really a deal, and the evidence behind it.</p>
+    <ul class="stats" id="stats"></ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="toolbar" aria-label="Search and filters">
+    <label class="field grow">
+      <span>Search deals</span>
+      <input id="q" type="search" placeholder="Try Sony, vacuum, LEGO" autocomplete="off">
+    </label>
+    <label class="field">
+      <span>Category</span>
+      <select id="category"></select>
+    </label>
+    <label class="field">
+      <span>Store</span>
+      <select id="store"></select>
+    </label>
+    <label class="field">
+      <span>Discount</span>
+      <select id="minDiscount">
+        <option value="0">Any discount</option>
+        <option value="20">20% or more</option>
+        <option value="35">35% or more</option>
+        <option value="50">50% or more</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Verdict</span>
+      <select id="verdict">
+        <option value="">Any verdict</option>
+        <option>New low</option>
+        <option>Strong price</option>
+        <option>Routine sale</option>
+        <option>Inflated list</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Sort</span>
+      <select id="sort">
+        <option value="score">Best deal score</option>
+        <option value="discount">Biggest discount</option>
+        <option value="priceAsc">Lowest price</option>
+        <option value="priceDesc">Highest price</option>
+      </select>
+    </label>
+  </section>
+
+  <p class="result-line" id="resultLine" role="status"></p>
+  <section id="grid" class="grid" aria-label="Deals"></section>
+  <section id="detail" class="detail" hidden></section>
+
+  <section class="method">
+    <h2>How each verdict is graded</h2>
+    <ul>
+      <li><strong>New low</strong> - a source with price history calls it the lowest price seen, or an earlier tracked price was higher.</li>
+      <li><strong>Strong price</strong> - a deep cut against the usual price, with no evidence it is a routine repeat.</li>
+      <li><strong>Routine sale</strong> - the same price appeared in an earlier sale, or it only rolls back a recent increase.</li>
+      <li><strong>Inflated list</strong> - the percentage is measured against a list price that was raised, so it overstates the saving.</li>
+    </ul>
+    <p>Prices were checked on 27 Nov 2026 and can change or sell out. The store page at checkout is the final word.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>DealHarbor lists prices read from the stores and sources named on each deal. Store links open the product at that store.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
